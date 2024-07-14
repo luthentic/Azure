@@ -1,5 +1,5 @@
 <p align="center">
-  <img src = "https://media.geeksforgeeks.org/wp-content/uploads/20230406152358/CN-(1).jpg" width=600 height=400>
+  <img src = "https://dmsiworks.com/wp-content/uploads/Is-Business-Central-on-Azure.jpg" width=600 height=400>
 </p>
 
 
