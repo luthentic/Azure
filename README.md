@@ -53,3 +53,34 @@ The name of a resource type is in the format: {resource-provider}/{resource-type
 ---
 
 
+
+## Entra ID:
+
+- Microsoft Entra ID is a cloud-based, multi-tenant directory service included in Azure subscriptions.
+- It provides advanced features like multi-factor authentication and identity protection.
+- It’s used for secure access to cloud resources, managing users, and configuring access to applications.
+- It differs from traditional AD DS, focusing more on web-based apps and modern management.
+- Each Azure subscription is associated with one Microsoft Entra tenant, but a tenant can be associated with multiple subscriptions.
+- The Microsoft Entra schema is simpler than AD DS and is extensible.
+
+When comparing AD DS with Microsoft Entra ID, it’s important to note the following characteristics of AD DS:
+
+    AD DS is a true directory service, with a hierarchical X.500-based structure.
+    AD DS uses Domain Name System (DNS) for locating resources such as domain controllers.
+    You can query and manage AD DS by using Lightweight Directory Access Protocol (LDAP) calls.
+    AD DS primarily uses the Kerberos protocol for authentication.
+    AD DS uses OUs and GPOs for management.
+    AD DS includes computer objects, representing computers that join an Active Directory domain.
+    AD DS uses trusts between domains for delegated management.
+
+When comparing Microsoft Entra ID with AD DS, it’s important to note the following characteristics of Microsoft Entra ID:
+
+    Microsoft Entra ID is primarily an identity solution, and it’s designed for internet-based applications by using HTTP (port 80) and HTTPS (port 443) communications.
+    Microsoft Entra ID is a multi-tenant directory service.
+    Microsoft Entra users and groups are created in a flat structure, and there are no OUs or GPOs.
+    You can't query Microsoft Entra ID by using LDAP; instead, Microsoft Entra ID uses the REST API over HTTP and HTTPS.
+    Microsoft Entra ID doesn't use Kerberos authentication; instead, it uses HTTP and HTTPS protocols such as SAML, WS-Federation, and OpenID Connect for authentication, and uses OAuth for authorization.
+    Microsoft Entra ID includes federation services, and many third-party services such as Facebook are federated with and trust Microsoft Entra ID.
+
+    When you deploy cloud services such as Microsoft 365 or Intune, you also need to have directory services in the cloud to provide authentication and authorization for these services. Because of this, each cloud service that needs authentication will create its own Microsoft Entra tenant.
+
