@@ -81,6 +81,30 @@ When comparing Microsoft Entra ID with AD DS, it’s important to note the follo
     You can't query Microsoft Entra ID by using LDAP; instead, Microsoft Entra ID uses the REST API over HTTP and HTTPS.
     Microsoft Entra ID doesn't use Kerberos authentication; instead, it uses HTTP and HTTPS protocols such as SAML, WS-Federation, and OpenID Connect for authentication, and uses OAuth for authorization.
     Microsoft Entra ID includes federation services, and many third-party services such as Facebook are federated with and trust Microsoft Entra ID.
+    
+- When you deploy cloud services such as Microsoft 365 or Intune, you also need to have directory services in the cloud to provide authentication and authorization for these services. Because of this, each cloud service that needs authentication will create its own Microsoft Entra tenant.
 
-    When you deploy cloud services such as Microsoft 365 or Intune, you also need to have directory services in the cloud to provide authentication and authorization for these services. Because of this, each cloud service that needs authentication will create its own Microsoft Entra tenant.
+- Directory-synchronized identity	User accounts that have a directory-synchronized identity are defined in an on-premises Active Directory. A synchronization activity occurs via Microsoft Entra Connect to bring these user accounts in to Azure. The source for these accounts is Windows Server Active Directory.
 
+### Create group accounts:
+
+- Use security groups to set permissions for all group members at the same time, rather than adding permissions to each member individually.
+- Add Microsoft 365 groups to enable group access for guest users outside your Microsoft Entra organization.
+- Security groups can be implemented only by a Microsoft Entra administrator.
+- Normal users and Microsoft Entra admins can both use Microsoft 365 groups.
+
+## Resource tags:
+
+- Each resource tag has a name and a value.
+- The tag name remains constant for all resources that have the tag applied.
+- The tag value can be selected from a defined set of values, or unique for a specific resource instance.
+- A resource or resource group can have a maximum of 50 tag name/value pairs.
+- Tags applied to a resource group aren't inherited by the resources in the resource group.
+
+
+## Management Groups:
+
+- By default, all new subscriptions are placed under the top-level management group, or root group.
+- All subscriptions within a management group automatically inherit the conditions applied to that management group.
+- A management group tree can support up to six levels of depth.
+- Azure role-based access control authorization for management group operations isn't enabled by default.
